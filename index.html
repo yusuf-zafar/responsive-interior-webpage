@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+  <div class="banner">
+    <nav class="navbar">
+      <img src="./images/logo.png" class="logo">
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--  main content -->
+
+    <div class="main">
+
+      <div class="title">
+        <h2>Best Looking Homes</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+      </div>
+
+      <!-- card -->
+
+      <div class="display-images">
+
+        <div class="card">
+          <h3>Home 1</h3>
+          <img src="./images/indes1.jpg">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, earum.</p>
+        </div>
+
+        <div class="card">
+          <h3>Home 2</h3>
+          <img src="./images/indes2.jpeg">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, earum.</p>
+        </div>
+
+        <div class="card">
+          <h3>Home 3</h3>
+          <img src="./images/indes3.jpg">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, earum.</p>
+        </div>
+
+        <div class="card">
+          <h3>Home 4</h3>
+          <img src="./images/indes4.jpg">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, earum.</p>
+        </div>
+
+      </div>
+
+      <!-- footer -->
+    
+    <div class="footer">
+     <p>© Yusuf Ansari</p> 
+     <p><address>Lokhandwala, Andheri west, Mumbai 400053</address></p>
+     <p>yusuf.ansari983@gmail.com</p>
+    </div>
+    
+  </div>
+
+    <script>
+      const toggleButton = document.getElementsByClassName("toggle-button")[0];
+const navbarLinks = document.getElementsByClassName("navbar-links")[0];
+
+toggleButton.addEventListener('click',()=>{
+    navbarLinks.classList.toggle("active")
+});
+    </script>
+  </body>
+</html>

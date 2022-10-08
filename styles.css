@@ -1,0 +1,169 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(40, 36, 36, 0.742);
+    color: white;
+}
+.logo{
+    width: 180px;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0.5rem;
+}
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-links li{
+    list-style: none;
+    font-size: 1.5rem;
+}
+.navbar-links li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    display: block;
+}
+.navbar-links li:hover{
+    background-color: rgb(235, 235, 235);
+    color: black;
+}
+.navbar-links li:hover a{
+    color: black;
+}
+.toggle-button{
+    position: absolute;
+    top:  .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* main content */
+
+.banner{
+    max-width: 100%;
+    height: auto;
+    background-image: linear-gradient(rgba(3, 3, 3, 0.756),rgba(0,0,0,0.70)),url(./images/interior1.jpg);
+    background-size: cover;
+}
+  
+.main{
+    color: white;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.title{
+width: 80%;
+margin: auto;
+}
+
+/* card */
+ 
+.display-images{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 50px 3%;
+}
+
+.display-images img{
+    width: 90%;
+    height: auto;
+}
+.card{
+    border: 1px solid white;
+    margin: 1rem;
+    box-shadow: 3px 3px 10px 2px rgba(193, 190, 190, 0.658);
+}
+
+/* footer */
+
+.footer{
+    background-color: rgba(0, 0, 0, 0.823);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer p{
+    margin: 50px 20px;
+}
+
+/* responsive css */
+
+@media only screen and (max-width: 980px) {
+    .display-images {
+        display: grid;
+        grid-template-columns: repeat(2, 300px); 
+        grid-template-rows: 500px; 
+        grid-gap: 0.1rem;
+        margin: 0 7%;
+    }
+}
+
+  @media only screen and (max-width: 768px) {
+
+    /* navbar */
+
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-links li {
+        text-align: center;
+    }
+    .navbar-links li a {
+        padding: 0.5rem 1rem;
+    }
+    .navbar-links.active{
+        display: flex;
+    }
+
+    /* main */
+
+    .display-images {
+        display: block;
+        margin: auto;
+    }
+    .card{
+        align-items: center;
+    }
+
+    /* footer */
+
+    .footer{
+        display: block;
+        padding: 20px;
+    }
+  }
